@@ -23,12 +23,16 @@ public class NewCalculatorPowerMockito {
         PowerMockito.when(NewСalculator.getStaticRandomTwo()).thenReturn(10);
         PowerMockito.when(NewСalculator.plusStatic()).thenCallRealMethod();
         PowerMockito.when(NewСalculator.minusStatic()).thenCallRealMethod();
+        PowerMockito.when(NewСalculator.subtractionStatic()).thenCallRealMethod();
+        PowerMockito.when(NewСalculator.divisionStatic()).thenCallRealMethod();
+        PowerMockito.when(NewСalculator.modulDivisionStatic()).thenCallRealMethod();
 
-        Assert.assertEquals(NewСalculator.plusStatic(), 30);  //почему-то ошибка правильно 30 - 0
-        Assert.assertEquals(NewСalculator.minusStatic(), 10);   //почему-то ошибка правильно 10 - 0
-/*        Assert.assertEquals(newСalculator.subtractionStatic(), 200);
-        Assert.assertEquals(newСalculator.modulDivisionStatic(), 0);
-        Assert.assertEquals(newСalculator.divisionStatic(), 2);*/
+
+        Assert.assertEquals(NewСalculator.plusStatic(), 30);
+        Assert.assertEquals(NewСalculator.minusStatic(), 10);
+        Assert.assertEquals(NewСalculator.subtractionStatic(), 200);
+        Assert.assertEquals(NewСalculator.divisionStatic(), 0);
+        Assert.assertEquals(NewСalculator.modulDivisionStatic(), 2);
     }
 
     @Test
