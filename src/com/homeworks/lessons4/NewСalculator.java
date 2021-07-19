@@ -74,18 +74,18 @@ public class NewСalculator {
     }
 
 
-    public int divisionStatic() {
+    public static int divisionStatic() {
         return getStaticRandomOne() / getStaticRandomTwo();
 
     }
 
 
-    public int subtractionStatic() {
+    public static int subtractionStatic() {
         return getStaticRandomOne() * getStaticRandomTwo();
 
     }
 
-    public int modulDivisionStatic() {
+    public static int modulDivisionStatic() {
         return getStaticRandomOne() % getStaticRandomTwo();
 
     }
