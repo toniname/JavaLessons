@@ -12,7 +12,8 @@ public class Demo {
         ArrayWorker<Integer> arrayWorker = new ArrayWorker<>(array, 6);
         arrayWorker.countElement(array, 6);
 
-        ArrayUtil arrayUtil = new ArrayUtil();
+
+
 
     }
 

@@ -1,15 +1,19 @@
 package com.homeworks.lessons7;
 
-public class ArrayUtil {
+public class ArrayUtil extends Array {
 
-    public static <T extends Number> int averageValue(T[] array) {
-        int average = 0;
+    public ArrayUtil(Object[] array) {
+        super(array);
+    }
+
+    public static <T extends Number> void averageValue(T[] array) {
+
         for (T arr : array) {
-            return average = arr.intValue() / array.length;
-
+            int average = arr.intValue() / array.length;
+            System.out.println(average);
         }
 
-        return average;
+
     }
 
 

@@ -1,6 +1,6 @@
 package com.homeworks.lessons7;
 
-public class Array<T>  extends ArrayUtil{
+public class Array<T>  {
     private T[] array;
 
     public Array(T[] array) {
