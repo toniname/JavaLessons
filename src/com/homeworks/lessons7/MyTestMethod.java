@@ -7,18 +7,13 @@ an array T[] that are greater than a specified element maxElem.
  */
 public class MyTestMethod {
 
-    public static <T extends Integer> void calcNum(T [] array, T maxElem) {
-        int i = 0;
-        for (T  arr : array){
-
-            if (arr.intValue() > maxElem.intValue()){
+    public static <T extends Integer> void calcNum(T[] array, T maxElem) {
+        for (T arr : array) {
+            if (arr.intValue() > maxElem.intValue()) {
                 System.out.println(arr.intValue());
-            }
-            else {
+            } else {
                 System.out.println("less than a specified element");
             }
-
-
 
         }
     }
