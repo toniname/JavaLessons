@@ -6,7 +6,7 @@ public class ArrayUtil extends Array {
         super(array);
     }
 
-    public static <T extends Number> void averageValue(T[] array) {
+    public static <T extends Number> void averageValue(T [] array) {
 
         for (T arr : array) {
             int average = arr.intValue() / array.length;
