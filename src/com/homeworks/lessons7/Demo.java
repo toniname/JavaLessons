@@ -13,6 +13,8 @@ public class Demo {
         arrayWorker.countElement(array, 6);
 
         ArrayUtil arrayUtil = new ArrayUtil(array);
+        Array array1 = new Array(array);
+        array1.length();
         ArrayUtil.averageValue(array);
 
 

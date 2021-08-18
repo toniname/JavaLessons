@@ -1,23 +1,24 @@
 package com.homeworks.lessons7;
 
+import java.util.Arrays;
+
 public class ArrayUtil extends Array {
 
 
     public ArrayUtil(Object[] array) {
-        super(array);
+        super((Integer[]) array);
     }
 
-    public static <T extends Number> void averageValue(T[] array) {
-
-
+    protected static <T extends Number> double averageValue(T[] array) {
+        double sum = 0;
         for (T arr : array) {
-
-            double value =   arr.doubleValue();
-            double average = value / array.length;
-            System.out.println(average);
+             sum += arr.doubleValue();
+            System.out.println(sum);
+            return  sum / array.length;
 
         }
 
+        return  0;
     }
 
 }
