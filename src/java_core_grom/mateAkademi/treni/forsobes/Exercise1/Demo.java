@@ -1,4 +1,4 @@
-package java_core_grom.mateAkademi.treni.forsobes;
+package java_core_grom.mateAkademi.treni.forsobes.Exercise1;
 
 public class Demo {
     public static void main(String[] args) {
