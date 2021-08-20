@@ -12,10 +12,16 @@ public class Demo {
         ArrayWorker<Integer> arrayWorker = new ArrayWorker<>(array, 6);
         arrayWorker.countElement(array, 6);
 
-        ArrayUtil arrayUtil = new ArrayUtil(array);
-        Array array1 = new Array(array);
-        array1.length();
-        ArrayUtil.averageValue(array);
+
+
+        Array<Integer> set1 = new Array<>(new Integer[]{1,2,3,4,5,});
+        double averageValue1 = ArrayUtil.averageValue(set1);
+        System.out.println(averageValue1);
+
+       /* Array<Double> set2 = new Array<>(new Double[]{1.0 ,2.0 ,3.0});
+        double averageValue2 = ArrayUtil.averageValue(set2);
+        System.out.println(averageValue2);*/
+
 
 
     }
