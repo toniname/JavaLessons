@@ -1,7 +1,7 @@
 package com.homeworks.lessons7;
 
 public class Array<T extends Integer>  {
-    private final T[] array;
+    private T[] array;
 
     public Array(T[] array) {
         this.array = array;

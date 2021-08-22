@@ -18,7 +18,7 @@ public class Demo {
         double averageValue1 = ArrayUtil.averageValue(set1);
         System.out.println(averageValue1);
 
-       /* Array<Double> set2 = new Array<>(new Double[]{1.0 ,2.0 ,3.0});
+        /*Array<Integer> set2 = new Array<>(new Double[]{1.0 ,3.0 ,5.0});
         double averageValue2 = ArrayUtil.averageValue(set2);
         System.out.println(averageValue2);*/
 
