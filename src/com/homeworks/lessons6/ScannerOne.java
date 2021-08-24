@@ -1,11 +1,11 @@
 package com.homeworks.lessons6;
 
 public class ScannerOne {
-    String Digital;
-    String Literal;
-    String Char;
-    String DigitalDouble;
-    String value;
+    private String digital;
+    private String literal;
+    private String Symbol;
+    private String DigitalDouble;
+    private String value;
 
     public String getDigitalDouble() {
         return DigitalDouble;
@@ -16,38 +16,39 @@ public class ScannerOne {
     }
 
     public String getDigital() {
-        return Digital;
+        return digital;
     }
 
     public void setDigital(String digital) {
-        Digital = digital;
+        digital = digital;
     }
 
     public String getLiteral() {
-        return Literal;
+        return literal;
     }
 
     public void setLiteral(String literal) {
-        Literal = literal;
+        literal = literal;
     }
 
-    public String getChar() {
-        return Char;
+    public String getSymbol(String symbol) {
+        return Symbol;
     }
 
-    public void setChar(String aChar) {
-        Char = aChar;
+    public void setSymbol(String symbol) {
+        Symbol = symbol;
     }
 
     public String homeRegexOne() {
         if (getDigital().equals("numeral")) {
-            value = "\\d";
+            value = "\\d*";
         } else if (getLiteral().equals("letter")) {
-            value = "[a-zA-z]";
+            value = "[a-zA-zа-яА-Я]*";
         }else if ( getDigitalDouble().equals("double")) {
-            value = "\\d{2}\\W\\d{2}";
-        } else if (getChar().equals("char")) {
-            value = "\\W";
+//            value = "\\d{2}\\W\\d{2}";
+            value = "[0-9]*?[.][0-9]+";
+        } else if (getSymbol("").equals("char")) {
+            value = "[a-zA-Z]{1}";
         } else
             value = "nothing";
         return value;

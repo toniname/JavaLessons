@@ -16,7 +16,7 @@ public class ScannerDemo {
         ScannerTwo scannerTwo = new ScannerTwo();
         scannerOne.setDigital(""); //numeral
         scannerOne.setLiteral("letter"); //letter
-        scannerOne.setChar(""); //char
+        scannerOne.getSymbol(""); //char
         scannerOne.setDigitalDouble(""); //double
         scannerTwo.homeRegexTwo(scannerOne.homeRegexOne());
 

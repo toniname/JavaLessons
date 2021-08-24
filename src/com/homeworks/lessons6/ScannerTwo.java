@@ -10,18 +10,19 @@ public class ScannerTwo {
     public void homeRegexTwo(String value) throws IOException {
 
         FileReader fr = new FileReader("D:/джава/part3.txt");
-        Scanner scanner = new Scanner(fr);
+        try(fr;
+        Scanner scanner = new Scanner(fr)) {
 
-        String input = scanner.nextLine();
-        System.out.println(input);
+            String input = scanner.nextLine();
+            System.out.println(input);
 
-        Pattern regex = Pattern.compile(value);
-        Matcher matcher = regex.matcher(input);
-        fr.close();
-        while (matcher.find()) {
-            System.out.println(matcher.group());
+            Pattern regex = Pattern.compile(value);
+            Matcher matcher = regex.matcher(input);
+            while (matcher.find()) {
+                System.out.println(matcher.group());
+            }
+            System.out.println("End");
+
         }
-        System.out.println("End");
-
     }
 }

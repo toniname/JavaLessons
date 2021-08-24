@@ -39,30 +39,28 @@ public class First {
         System.out.println(matcher.matches());
     }
 
-    public void homeRegexFour(String input4) {//4) В строке содержутся слова и числа. Необходмо выделить числа и посчитать их сумму.
+    public void homeRegexFour(String input4) {//4) В строке содержатся слова и числа. Необходимо выделить числа и посчитать их сумму.
         Pattern pattern = Pattern.compile("\\d");
 
         Matcher matcher = pattern.matcher(input4);
         int count = 0, sum = 0;
-        while (matcher.find()){
+        while (matcher.find()) {
             for (int i = 0; i < matcher.group().length(); i++) {
-                if (Character.isDigit(matcher.group().charAt(i))) {
+                char symbol = matcher.group().charAt(i);
+                if (Character.isDigit(symbol)) {
                     count++;
-                    sum += Integer.parseInt(String.valueOf(matcher.group().charAt(i)));
+                    sum += Integer.parseInt(String.valueOf(symbol));
                 }
             }
         }
         System.out.println("number of digits in a line:" + "\t" + count);
-        System.out.println("Sum of numbers:"+ "\t" +sum);
-
-
-
+        System.out.println("Sum of numbers:" + "\t" + sum);
     }
 
     public void homeRegexFive(String input5) {// 5) Пользователь вводит телефон в формате (ххх)ххх-хх-хх
         // (ххх) должен быть таким: (095), (097), (073), (067), (099), (063). Проверить, чтобы 7-ый номер был в формате
         // "(ххх)ххх-хх-хх".
-        Pattern regex = Pattern.compile("\\W(095|097|073|067|099|063)\\W(\\w{3})*\\W*(\\w{2})*\\W*(\\w{2})*");//|-или ()-группируем
+        Pattern regex = Pattern.compile("\\W(095|097|073|067|099|063)\\W(\\W{3})*\\W*(\\w{2})*\\W*(\\w{2})*");//|-или ()-группируем
 //      Pattern regex = Pattern.compile("\\W(095|097|073|067|099|063)\\W;//|-или ()-группируем
         Matcher matcher = regex.matcher(input5);
 
