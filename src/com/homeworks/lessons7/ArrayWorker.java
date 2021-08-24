@@ -16,12 +16,7 @@ public class ArrayWorker<T extends Number> {
         return array;
     }
 
-    public T getValue() {
-        return value;
-    }
-
     public void countElement(T[] array, T value) {
-        int i = 0;
         for (T arr : array) {
             if (arr.intValue() > value.intValue()) {
                 System.out.println(arr.intValue());
