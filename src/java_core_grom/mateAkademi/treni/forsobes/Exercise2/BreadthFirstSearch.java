@@ -15,7 +15,7 @@ public class BreadthFirstSearch {
 
     }
 
-    public void insert(int v) {  //
+    public void insert(int v) {  //insert graph heads
         if (tail == size - 1) {
             tail = -1;
         }
