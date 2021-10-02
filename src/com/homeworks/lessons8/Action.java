@@ -6,7 +6,7 @@ public interface Action  {
 
     void deleteProductInBasket();
 
-    void addSimilarInBasket();
+    void addSimilarProductInBasket();
 
     void findProduct();
 
