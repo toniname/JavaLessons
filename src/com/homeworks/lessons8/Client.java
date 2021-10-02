@@ -1,48 +1,31 @@
 package com.homeworks.lessons8;
 
-public class Client implements Action {
-    private long id;
+import java.util.List;
+
+public class Client extends Shop implements Action{
+    private final long clientId;
     private String name;
-    private String product;
     private double price;
 
-    public Client(long id, String name, String product, double price) {
-        this.id = id;
+    public Client(List<Object> product, long clientId, String name, double price) {
+        super(product);
+        this.clientId = clientId;
         this.name = name;
-        this.product = product;
         this.price = price;
     }
 
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
+    public long getClientId() {
+        return clientId;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+
 
     public double getPrice() {
         return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    public String getProduct() {
-        return product;
-    }
-
-    public void setProduct(String product) {
-        this.product = product;
     }
 
     @Override
@@ -56,7 +39,7 @@ public class Client implements Action {
     }
 
     @Override
-    public void addSimilarInBasket() {
+    public void addSimilarProductInBasket() {
 
     }
 
