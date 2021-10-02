@@ -1,4 +1,7 @@
 package com.homeworks.lessons8;
+
+import java.util.List;
+
 /*Создать приложение интернет - магазина(консольное). Приложение должен выполнять следующие операции:
 1) добавление товара(название, производитель, дата производства и т.д.).
 2) добавление сопутствующих товаров.
@@ -7,33 +10,14 @@ package com.homeworks.lessons8;
 5) выбор товара по определенным критериям и после выводить сопутствующие товары.
 Учесть, что каждого товара определенное количество в магазине.
 Примеры товаров: мобильные телефоны, телевизоры и т.д.*/
-public class Shop implements Action {
-    private String product;
-    private int numberProduct;
+public abstract class Shop {
+    private final List<Object>Product;
 
-    public Shop(String product, int numberProduct) {
-        this.product = product;
-        this.numberProduct = numberProduct;
+    public Shop(List<Object> product) {
+        Product = product;
     }
 
-
-    @Override
-    public void addProductInBasket() {
-
-    }
-
-    @Override
-    public void deleteProductInBasket() {
-
-    }
-
-    @Override
-    public void addSimilarInBasket() {
-
-    }
-
-    @Override
-    public void findProduct() {
-
+    public List<Object> getProduct() {
+        return Product;
     }
 }
