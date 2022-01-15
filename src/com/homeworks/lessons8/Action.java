@@ -1,13 +1,22 @@
 package com.homeworks.lessons8;
 
-public interface Action  {
+import java.util.List;
 
-    void addProductInBasket();
+public interface Action {
 
-    void deleteProductInBasket();
+    //Добавление
+    public Shop addProductInBasket(Shop shop);
 
-    void addSimilarProductInBasket();
+    //Удаление
+    void deleteProductInBasket(Long id);
 
-    void findProduct();
+    //Добавление SimilarProduct
+    void addSimilarProductInBasket(Shop shop);
+
+    //поиск или получение товаров
+    void findProduct(Shop shop, String productName);
+
+    //поиск по его ID
+    void findProductById(Long id);
 
 }
