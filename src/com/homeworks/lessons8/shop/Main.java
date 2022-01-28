@@ -1,4 +1,4 @@
-package com.homeworks.lessons8;
+package com.homeworks.lessons8.shop;
 
 import java.util.Map;
 import java.util.Scanner;
@@ -8,7 +8,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        TreeMap<String, TreeMap<String, Integer>> clients = new TreeMap<String, TreeMap<String, Integer>>();
+        TreeMap<String, TreeMap<String, Integer>> clients = new TreeMap<>();
 
         Scanner sc = new Scanner(System.in);
 
