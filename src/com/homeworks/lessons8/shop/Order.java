@@ -1,25 +1,31 @@
 package com.homeworks.lessons8.shop;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class Order {
-    private ArrayList<Item> orderlist = new ArrayList<Item>();    //продукты в заказе
+    private LinkedList<Item> orderList = new LinkedList<Item>();    //продукты в заказе
+    private LinkedList<Item>similarOrderListPhone = new LinkedList<Item>();// сопутствующие товары
     private boolean payment = false;    //оплачен ли заказ
     private boolean register = false;   //обработан ли заказ Администратором
 
 
-    public void addProdToOrder(ArrayList<Item> orderlist) {//добавить группу товаров к Заказу
-        this.orderlist = orderlist;
+    public void addProdToOrder(LinkedList<Item> orderlist) {//добавить группу товаров к Заказу
+        this.orderList = orderlist;
+    }
+
+    public void addSimilarToOrder(LinkedList<Item>similarOrderListPhone){ //добавить сопутствующие товары
+        this.similarOrderListPhone = similarOrderListPhone;
     }
 
 
     public void addProdToOrder(Item product) {//добавить товар к Заказу
-        orderlist.add(product);
+        orderList.add(product);
     }
 
 
     public void showOrder() {//показать Заказ
-        for (Item it : orderlist) {
+        for (Item it : orderList) {
             System.out.println(it);
         }
     }
