@@ -1,4 +1,5 @@
 package com.homeworks.lessons8.shop;
+
 /*1) добавление товара(название, производитель, дата производства и т.д.).
 2) добавление сопутствующих товаров.
 3) удаление товара с сопутствующими товарами.
@@ -34,7 +35,7 @@ public class Item {
         this.name = name;
     }
 
-    public void setPrice (float price) {
+    public void setPrice(float price) {
         this.price = price;
     }
 
@@ -48,7 +49,7 @@ public class Item {
 
     @Override
     public String toString() {
-        return "Название = "+name+" Стоимость = "+price;
+        return "Название = " + name + " Стоимость = " + price;
     }
 }
 

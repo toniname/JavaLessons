@@ -21,7 +21,7 @@ class Client {
 
     //оплатить Заказ
     public void pay() {
-        if(order.isPayment() == true) {
+        if (order.isPayment() == true) {
             System.out.println("Вы уже оплатили заказ");
         } else {
             order.setPayment(true);
@@ -30,9 +30,9 @@ class Client {
 
     //Забрать товар
     public void take() {
-        if(order.isPayment() == false) {
+        if (order.isPayment() == false) {
             System.out.println("Вы ещё не оплатили товар");
-        } else if(order.isRegister() == false) {
+        } else if (order.isRegister() == false) {
             System.out.println("Ваша заявка ещё не обработана");
         } else {
             System.out.println("Спасибо за покупку!");
