@@ -1,11 +1,11 @@
 package com.homeworks.lessons8.shop;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class Admin {
 
-    private ArrayList<Item> products = new ArrayList<Item>();
-    private ArrayList<Client> blackclients = new ArrayList<Client>();
+    private LinkedList<Item> products = new LinkedList<Item>();
+    private LinkedList<Client> blackclients = new LinkedList<Client>();
 
     //регистрация товара и добавление неплательщиков в черный список
     public void registerOrder(Client client) {

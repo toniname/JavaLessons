@@ -4,11 +4,19 @@ public class DemoShop {
     public static void main(String[] args) {
 
         Item item = new Item("adsad", 45355, 346677777, "produktName");
+        System.out.println(item.getName());
+
+
+
+        Client client = new Client();
+
 
 
         Order order = new Order();
 
-        Client client = new Client();
-
+        order.setPayment(true);
+        order.setRegister(true);
+        order.isPayment();
+        order.showOrder();
     }
 }

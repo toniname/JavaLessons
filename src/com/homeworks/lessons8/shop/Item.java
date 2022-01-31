@@ -49,7 +49,12 @@ public class Item {
 
     @Override
     public String toString() {
-        return "Название = " + name + " Стоимость = " + price;
+        return "Item{" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                ", id=" + id +
+                ", produktName='" + produktName + '\'' +
+                '}';
     }
 }
 
