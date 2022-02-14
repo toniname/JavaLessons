@@ -13,14 +13,19 @@ public class Item {
     private String name; //Название товара
     private float price;  // Цена
     private long id; //Айдишник
-    private String produktName; // производитель
+    private String producer; // производитель
+    private Category category;
+    private SubCategory subCategory;
+    private int count;
 
 
-    public Item(String name, int price, long id, String produktName) {
+    public Item(String name, float price, long id, String producer, Category category, SubCategory subCategory) {
         this.name = name;
         this.price = price;
-        this.id = price;
-        this.produktName = produktName;
+        this.id = id;
+        this.producer = producer;
+        this.category = category;
+        this.subCategory = subCategory;
     }
 
     public String getName() {
@@ -53,7 +58,7 @@ public class Item {
                 "name='" + name + '\'' +
                 ", price=" + price +
                 ", id=" + id +
-                ", produktName='" + produktName + '\'' +
+                ", produktName='" + producer + '\'' +
                 '}';
     }
 }

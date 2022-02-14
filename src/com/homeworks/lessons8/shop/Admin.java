@@ -4,21 +4,21 @@ import java.util.LinkedList;
 
 public class Admin {
 
-    private LinkedList<Item> products = new LinkedList<Item>();
-    private LinkedList<Client> blackclients = new LinkedList<Client>();
+    private LinkedList<Item> products = new LinkedList<>();
+    private LinkedList<Client> blackClients = new LinkedList<>();
 
     //регистрация товара и добавление неплательщиков в черный список
     public void registerOrder(Client client) {
-        if (client.getOrder().isPayment() == true) {
+        if (client.getOrder().isPayment()) {
             client.getOrder().setRegister(true);
         } else {
-            blackclients.add(client);
+            blackClients.add(client);
         }
     }
 
     //создание новых продуктов
-    public void createNewProduct(String name, int price, long id, String produktName) {
-        products.add(new Item(name, price, id, produktName));
+    public void createNewProduct(String name, float price, long id, String producer, Category category, SubCategory subCategory) {
+        products.add(new Item(name, price, id, producer, category, subCategory));
     }
 }
 

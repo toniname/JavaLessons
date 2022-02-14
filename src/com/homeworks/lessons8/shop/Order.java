@@ -1,31 +1,23 @@
 package com.homeworks.lessons8.shop;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 
 public class Order {
-    private LinkedList<Item> orderList = new LinkedList<Item>();    //продукты в заказе
-    private LinkedList<Item> similarOrderListPhone = new LinkedList<Item>();// сопутствующие товары
+    private List<Item> orderList = new LinkedList<>();    //продукты в заказе
     private boolean payment/* = false*/;    //оплачен ли заказ
     private boolean register/* = false*/;   //обработан ли заказ Администратором
 
-    public void addProdToOrder(LinkedList<Item> orderlist) {//добавить группу товаров к Заказу
-        this.orderList = orderlist;
+    //constructor
+    public Order(List<Item> orderList, boolean payment, boolean register) {
+        this.orderList = orderList;
+        this.payment = payment;
+        this.register = register;
     }
 
-    public void addSimilarToOrder(LinkedList<Item> similarOrderListPhone) { //добавить сопутствующие товары
-        this.similarOrderListPhone = similarOrderListPhone;
+    public void addProductsToOrder(Item item) {//добавить группу товаров к Заказу
+        this.orderList.add(item);
     }
-
-
-    public void addProdToOrder(Item product) {//добавить товар к Заказу
-        orderList.add(product);
-    }
-
-    public void addSimilarToOrder(Item similarProduct) {//добавить сопутствующие товары к Заказу
-        similarOrderListPhone.add(similarProduct);
-    }
-
 
     public void showOrder() {//показать Заказ
         for (Item it : orderList) {
